@@ -17,5 +17,7 @@ namespace ClouthShop
     {
         public List<ClothingItem> Top { get; set; }
         public List<ClothingItem> Bottom { get; set; }
+
+        
     }
 }

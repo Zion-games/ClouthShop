@@ -75,9 +75,14 @@ namespace ClouthShop
             try
             {
                 json = File.ReadAllText("IVSDKDotNet/scripts/clouth_data.json");//READ THE JSON FILE
-                IVGame.Console.Print("json: " + json);
-                ClothingData data = JsonSerializer.Deserialize<ClothingData>(json);
-                //topList = data.Top;
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+                ClothingData data = JsonSerializer.Deserialize<ClothingData>(json, options);
+                topList = data.Top;
+                IVGame.Console.Print("json " + data.Top);
+
             }
             catch (Exception E)
             {
@@ -85,10 +90,6 @@ namespace ClouthShop
             }
 
             //topList.Add(new ClothingItem { Name = "T-Shirt", index = 0, Desc = "A simple T-Shirt", Price = 100, Owned = true });
-            topList.Add(new ClothingItem { Name = "Varsity Jacket", index = 0, texture = 0, Desc = "black and white Varsity Jacket.\nmade by R*Star", Price = 100, Owned = true });
-            //topList.Add(new ClothingItem { Name = "T-Shirt", index = 2, texture = 1, Desc = "A simple T-Shirt\n made by R*Star", Price = 100, Owned = true });
-            //topList.Add(new ClothingItem { Name = "Suit Jaket and button shirt", index = 2, texture = 0, Desc = "A simple T-Shirt\n made by R*Star", Price = 100, Owned = false });
-            //topList.Add(new ClothingItem { Name = "Suit Jaket and button shirt", index = 2,  Desc = "A simple T-Shirt\n made by R*Star", Price = 100, Owned = false, texture = 1, });
 
 
 
@@ -233,7 +234,7 @@ namespace ClouthShop
             {
                 for (int i = 0; i < topList.Count; i++)
                 {
-                    if (ImGuiIV.Selectable(topList[i].Name))
+                    if (ImGuiIV.Selectable(topList[i].Name, selectedIndex == i))
                     {
                         selectedIndex = i;
                         SET_CHAR_COMPONENT_VARIATION(playerPed, ((uint)ClouthType.Torso) , topList[i].index, topList[i].texture); // Set the drawable of the player

@@ -1,0 +1,52 @@
+{
+    "top": [
+        {
+            "name": "varsity jacket",
+            "desc": "black and white varsity jacket.\nmade by R*",
+            "price": 30,
+            "owned": false,
+            "index": 0,
+            "texture": 0
+        },
+        {
+            "name": "White long sleave shirt",
+            "desc": "White long sleave shirt.\nmade by R*",
+            "price": 30,
+            "owned": false ,
+            "index": 1,
+            "texture": 0
+        },
+        {
+            "name": "Executive Street Blazer, black",
+            "desc": "made by R*",
+            "price": 100,
+            "owned": false ,
+            "index": 1,
+            "texture": 0
+        },
+        {
+            "name": "Executive Street Blazer, brown",
+            "desc": "made by R*",
+            "price": 100,
+            "owned": false ,
+            "index": 1,
+            "texture": 1
+        }
+    ],
+    "bottom": [
+        {
+            "name": "T-shirt",
+            "desc": "made by Aron112",
+            "price": 30,
+            "owned": false,
+            "index": 0
+        },
+        {
+            "name": "T-shirt",
+            "desc": "made by Aron112",
+            "price": 30,
+            "owned": false,
+            "index": 1
+        }
+    ]
+}
