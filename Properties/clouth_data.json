@@ -1,0 +1,34 @@
+{
+    "top": [
+        {
+            "name": "T-shirt",
+            "desc": "made by Aron112",
+            "price": 30,
+            "owned": false,
+            "index": 0
+        },
+        {
+            "name": "T-shirt",
+            "desc": "made by Aron112",
+            "price": 30,
+            "owned": false ,
+            "index": 1
+        }
+    ],
+    "bottom": [
+        {
+            "name": "T-shirt",
+            "desc": "made by Aron112",
+            "price": 30,
+            "owned": false,
+            "index": 0
+        },
+        {
+            "name": "T-shirt",
+            "desc": "made by Aron112",
+            "price": 30,
+            "owned": false,
+            "index": 1
+        }
+    ]
+}
